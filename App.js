@@ -3,9 +3,9 @@
   import { NavigationContainer } from '@react-navigation/native';
   import { createStackNavigator } from '@react-navigation/stack';
   import ProfileScreen from './ProfileScreen';
-  import HomePage from './HomePage'; // make sure to create this file
+  import HomePage from './HomePage'; 
   import ChatScreen from './ChatScreen';
-  import LogIn from './LogIn'; // Import LogIn screen
+  import LogIn from './LogIn'; 
   const Stack = createStackNavigator();
 
   function App() {
