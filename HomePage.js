@@ -10,14 +10,15 @@ import {
   StatusBar,
 } from 'react-native';
 
-// Sample data
+
 const conversations = [
   {
     id: '1',
     name: 'Garen Sahakian',
     avatar: 'https://via.placeholder.com/40',
-    subject: 'Whats up bro!',
+    subject: 'Hi Stephen! How was your day?',
     time: 'Today',
+    unread: true, 
   },
   {
     id: '2',
@@ -85,18 +86,19 @@ const HomePage = ({ navigation }) => {
           data={conversations}
           keyExtractor={(item) => item.id}
           renderItem={({ item }) => (
-            <TouchableOpacity
-              style={styles.chatItem}
-              onPress={() => navigation.navigate('Chat', { name: item.name })}
-            >
-              <Image source={{ uri: item.avatar }} style={styles.avatar} />
-              <View style={styles.chatDetails}>
-                <Text style={styles.chatName}>{item.name}</Text>
-                <Text style={styles.chatSubject}>{item.subject}</Text>
-              </View>
-              <Text style={styles.chatTime}>{item.time}</Text>
-            </TouchableOpacity>
-          )}
+  <TouchableOpacity
+    style={styles.chatItem}
+    onPress={() => navigation.navigate('Chat', { name: item.name })}
+  >
+    <Image source={{ uri: item.avatar }} style={styles.avatar} />
+    <View style={styles.chatDetails}>
+      <Text style={styles.chatName}>{item.name}</Text>
+      <Text style={styles.chatSubject}>{item.subject}</Text>
+    </View>
+    <Text style={styles.chatTime}>{item.time}</Text>
+    {item.unread && <View style={styles.unreadBadge} />}
+  </TouchableOpacity>
+)}
         />
       </View>
       <View style={styles.footer}>
@@ -192,6 +194,15 @@ const styles = StyleSheet.create({
   profileButtonText: {
     color: 'white',
     fontWeight: 'bold',
+  },
+  unreadBadge: {
+    backgroundColor: 'green',
+    width: 10,
+    height: 10,
+    borderRadius: 5,
+    position: 'absolute',
+    right: 80,
+    top: 20,
   },
 });
 
