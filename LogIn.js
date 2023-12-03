@@ -11,7 +11,7 @@ const LogIn = ({ navigation }) => {
     <ImageBackground
       style={styles.container}
       // Replace with your own image
-      source={require('./assets/b.jpg')}
+      source={require('./assets/e.jpg')}
     >
       <Text style={styles.welcomeBack}>Welcome Back</Text>
       <View style={styles.inputContainer}>
