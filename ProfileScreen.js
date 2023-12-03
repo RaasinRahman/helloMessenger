@@ -6,8 +6,7 @@ const ProfileScreen = () => {
   const navigation = useNavigation();
 
   const handleLogOut = () => {
-    // Navigate to the login screen or handle the logout logic
-    navigation.navigate('Login');
+        navigation.navigate('Login');
   };
 
   return (
@@ -22,18 +21,18 @@ const ProfileScreen = () => {
         </TouchableOpacity>
       </View>
       <Image
-        ssource={require('./assets/b.jpg')} // Replace with your image URL
+        ssource={require('./assets/b.jpg')} 
         style={styles.profileImage}
       />
-      <Text style={styles.name}>James Martin</Text>
+      <Text style={styles.name}>Stephen Fisher</Text>
       <Text style={styles.jobTitle}>Senior Graphic Designer</Text>
       <View style={styles.followInfo}>
-        <Text style={styles.followText}>121 Friends</Text>
-        <Text style={styles.followText}>12 Unread Messages</Text>
+        <Text style={styles.followText}>92 Friends</Text>
+        <Text style={styles.followText}>1 Unread Message</Text>
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.infoTitle}>Email</Text>
-        <Text style={styles.infoContent}>james012@gmail.com</Text>
+        <Text style={styles.infoContent}>stephen012@gmail.com</Text>
       </View>
       <View style={styles.infoContainer}>
         <Text style={styles.infoTitle}>Mobile</Text>
