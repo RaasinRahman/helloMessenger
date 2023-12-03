@@ -4,14 +4,14 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import HomePage from './HomePage'; 
-import ChatScreen from './ChatScreen'; 
+import ChatScreen from './ChatScreen';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator>
+      <Stack.Navigator screenOptions={{ headerShown: false }}>
         <Stack.Screen name="Home" component={HomePage} />
         <Stack.Screen name="Chat" component={ChatScreen} />
       </Stack.Navigator>
