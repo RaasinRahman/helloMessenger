@@ -103,6 +103,12 @@ const HomePage = ({ navigation }) => {
         <TouchableOpacity style={styles.fab}>
           <Text style={styles.fabIcon}>+</Text>
         </TouchableOpacity>
+        <TouchableOpacity 
+          style={styles.profileButton}
+          onPress={() => navigation.navigate('Profile')}
+        >
+          <Text style={styles.profileButtonText}>Profile</Text>
+        </TouchableOpacity>
       </View>
     </>
   );
@@ -110,14 +116,14 @@ const HomePage = ({ navigation }) => {
 
 const styles = StyleSheet.create({
   safeAreaTop: {
-    backgroundColor: '#1A1A2E', // Dark blue color to match the header and footer
+    backgroundColor: '#1A1A2E',
   },
   container: {
     flex: 1,
-    backgroundColor: '#121212', // Dark background for the main content area
+    backgroundColor: '#121212',
   },
   header: {
-    backgroundColor: '#1A1A2E', // Dark blue header background
+    backgroundColor: '#1A1A2E',
     alignItems: 'center',
     justifyContent: 'center',
     paddingVertical: 10,
@@ -125,14 +131,14 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 20,
     fontWeight: 'bold',
-    color: '#E6E6E6', // Light grey text for better contrast
+    color: '#E6E6E6',
   },
   chatItem: {
     flexDirection: 'row',
     padding: 20,
     borderBottomWidth: 1,
-    borderBottomColor: '#333333', // Darker line for item separation
-    backgroundColor: '#121212', // Dark background for each chat item
+    borderBottomColor: '#333333',
+    backgroundColor: '#121212',
   },
   avatar: {
     width: 40,
@@ -147,33 +153,43 @@ const styles = StyleSheet.create({
   chatName: {
     fontSize: 16,
     fontWeight: 'bold',
-    color: '#E6E6E6', // Light grey text for better contrast
+    color: '#E6E6E6',
   },
   chatSubject: {
     fontSize: 14,
-    color: '#A0A0A0', // Slightly lighter grey for the subject
+    color: '#A0A0A0',
   },
   chatTime: {
     fontSize: 12,
-    color: '#A0A0A0', // Slightly lighter grey for the time
+    color: '#A0A0A0',
   },
   footer: {
-    backgroundColor: '#1A1A2E', // Dark blue footer background
+    backgroundColor: '#1A1A2E',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
     padding: 10,
   },
   fab: {
-    backgroundColor: '#0A3D62', // Dark blue for the FAB
+    backgroundColor: '#0A3D62',
     width: 56,
     height: 56,
     borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 4,
-    alignSelf: 'flex-end', // Align the button to the end
-    margin: 10,
   },
   fabIcon: {
     fontSize: 24,
+    color: 'white',
+    fontWeight: 'bold',
+  },
+  profileButton: {
+    backgroundColor: '#0A3D62',
+    padding: 10,
+    borderRadius: 5,
+  },
+  profileButtonText: {
     color: 'white',
     fontWeight: 'bold',
   },
