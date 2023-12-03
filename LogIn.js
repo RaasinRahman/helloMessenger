@@ -10,7 +10,7 @@ const LogIn = ({ navigation }) => {
   return (
     <ImageBackground
       style={styles.container}
-      // Replace with your own image
+     
       source={require('./assets/e.jpg')}
     >
       <Text style={styles.welcomeBack}>Welcome Back</Text>
@@ -37,11 +37,11 @@ const LogIn = ({ navigation }) => {
         title="Log in"
         containerStyle={styles.buttonContainer}
         buttonStyle={styles.button}
-        // Implement your login logic here
+      
         onPress={() => console.log('Log in pressed')}
       />
       <TouchableOpacity
-        // Implement your forgot password logic here
+    
         onPress={() => console.log('Forgot Password pressed')}
       >
         <Text style={styles.forgotPasswordText}>Forgot password?</Text>
@@ -52,7 +52,7 @@ const LogIn = ({ navigation }) => {
           title="Sign up"
           type="clear"
           titleStyle={{ color: 'white' }}
-          // Implement your sign up navigation logic here
+    
           onPress={() => console.log('Sign Up pressed')}
         />
       </View>
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
   },
   button: {
-    backgroundColor: '#0000FF', // Your button color
+    backgroundColor: '#0000FF', 
     borderRadius: 10,
   },
   forgotPasswordText: {
